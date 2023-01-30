@@ -16,7 +16,7 @@ TARGET_FOLDER_NAME="${MODELS_TARGET_FOLDER}/$(basename ${DOWNLOAD_FILENAME%.*.*}
 
 if [[ -e "${TARGET_FOLDER_NAME}" ]]; then
     echo "Warning: ${TARGET_FOLDER_NAME} already exists, skipping process. Delete the folder to create it again."
-    exit -1
+    exit 1
 fi
 
 echo "Downloading ${DOWNLOAD_FILENAME} from ${BASE_URL}"
